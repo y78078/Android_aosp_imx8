@@ -49,9 +49,11 @@ vendor/nxp-opensource/kernel_imx/drivers/mxc/vehicle/vehicle_rpmsg_m4.c:	extcon_
 vendor/nxp-opensource/kernel_imx/drivers/mxc/vehicle/vehicle_rpmsg_m4.c:	extcon_set_state_sync(ev_edev, EXTCON_VEHICLE_RPMSG_EVENT, 0);
 vendor/nxp-opensource/kernel_imx/drivers/mxc/vehicle/vehicle_rpmsg_m4.c:	extcon_set_state_sync(ev_edev, EXTCON_VEHICLE_RPMSG_EVENT, 1);
 vendor/nxp-opensource/kernel_imx/drivers/mxc/vehicle/vehicle_rpmsg_m4.c:	extcon_set_state_sync(ev_edev, EXTCON_VEHICLE_RPMSG_EVENT, 0);
+
 vendor/nxp-opensource/kernel_imx/drivers/extcon/extcon.c:	[EXTCON_VEHICLE_RPMSG_EVENT] = {
 vendor/nxp-opensource/kernel_imx/drivers/extcon/extcon.c:		.id = EXTCON_VEHICLE_RPMSG_EVENT,
 vendor/nxp-opensource/kernel_imx/drivers/extcon/extcon.c:		.name = "VEHICLE_RPMSG_EVENT",
+
 vendor/nxp-opensource/kernel_imx/include/linux/extcon.h:#define EXTCON_VEHICLE_RPMSG_EVENT     59
 vendor/nxp-opensource/imx/evs/evs_service/evs_service.cpp:        if (!strncmp(cp, "STATE=VEHICLE_RPMSG_EVENT=0", strlen("STATE=VEHICLE_RPMSG_EVENT=0"))) {
 vendor/nxp-opensource/imx/evs/evs_service/evs_service.cpp:        } else if (!strncmp(cp, "STATE=VEHICLE_RPMSG_EVENT=1", strlen("STATE=VEHICLE_RPMSG_EVENT=1"))) {

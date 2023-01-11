@@ -22,6 +22,7 @@ date "2022-11-12 13:14:15"
 
 
 grep -irs vendor.vehicle.event
+
 vendor/nxp-opensource/imx/evs/evs_service/evs_service.cpp:#define RPMSG_CAN_EVENT  "vendor.vehicle.event"
 device/nxp/imx8q/sepolicy_car/property_contexts:vendor.vehicle.event      u:object_r:vendor_evs_prop:s0
 device/nxp/imx8q/mek_8q/init_car.rc:on property:vendor.vehicle.event=1 && property:vendor.evs.video.ready=1

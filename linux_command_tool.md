@@ -2,13 +2,17 @@
 ## ENV nxp imx8qmmek Android Automotive 12.0.0_2.1.0 (Linux 5.15.32 BSP)
 
 ## get vehicle property
+
+#!/system/bin/sh
+START_YEAR=2000
+
 VENDOR_TIME_SET_HOUR=$(dumpsys car_service get-property-value 561033488 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1)
 
 VENDOR_TIME_SET_MIN=$(dumpsys car_service get-property-value 561033489 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1)
 
 VENDOR_TIME_SET_SEC=$(dumpsys car_service get-property-value 561033490 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1)
 
-VENDOR_TIME_SET_DATE=$(dumpsys car_service get-property-value 561033491 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1)
+VENDOR_TIME_SET_YEAR=$(expr $(dumpsys car_service get-property-value 561033491 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1) + $START_YEAR)
 
 VENDOR_TIME_SET_MONTH=$(dumpsys car_service get-property-value 561033492 |cut -d , -f 6|cut -d [ -f 2 | cut -d ] -f 1)
 
@@ -16,6 +20,12 @@ VENDOR_TIME_SET_DAY=$(dumpsys car_service get-property-value 561033493 |cut -d ,
  
 date "2022-11-12 13:14:15"
 
+echo $VENDOR_TIME_SET_HOUR
+echo $VENDOR_TIME_SET_MIN
+echo $VENDOR_TIME_SET_SEC
+echo $VENDOR_TIME_SET_YEAR
+echo $VENDOR_TIME_SET_MONTH
+echo $VENDOR_TIME_SET_DAY
 
 
 

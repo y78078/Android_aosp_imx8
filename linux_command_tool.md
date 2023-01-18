@@ -75,3 +75,4 @@ vendor/nxp-opensource/kernel_imx/include/linux/extcon.h:#define EXTCON_VEHICLE_R
 vendor/nxp-opensource/imx/evs/evs_service/evs_service.cpp:        if (!strncmp(cp, "STATE=VEHICLE_RPMSG_EVENT=0", strlen("STATE=VEHICLE_RPMSG_EVENT=0"))) {
 vendor/nxp-opensource/imx/evs/evs_service/evs_service.cpp:        } else if (!strncmp(cp, "STATE=VEHICLE_RPMSG_EVENT=1", strlen("STATE=VEHICLE_RPMSG_EVENT=1"))) {
 
+healthd: battery none chg=au avc: denied { map } for comm="settime.sh" path="/system/bin/sh" dev="dm-4" ino=559 scontext=u:r:settime-sh:s0 tcontext=u:object_r:shell_exec:s0 tclass=file permissive=0
